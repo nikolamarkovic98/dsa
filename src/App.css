@@ -1,0 +1,117 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* STACK */
+.stack {
+    width: 200px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0.2rem;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.stack-item {
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* STACK END */
+
+/* QUEUE START */
+.queue {
+    width: 500px;
+    height: 60px;
+    display: flex;
+    padding: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.queue-item {
+    min-width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    background-color: #333;
+    color: #fff;
+}
+/* QUEUE END */
+
+/* LINKED LIST START */
+.linked-list {
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.linked-list-item {
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+}
+.linked-list span {
+    margin: 0 0.5rem;
+}
+/* LINKED LIST END */
+
+.bst-representation main {
+    min-height: 300px;
+}
+
+.bst .bst-node {
+    position: relative;
+}
+
+.bst .key-wrapper {
+    margin-bottom: 2rem;
+}
+
+.bst .key {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+}
+
+.bst .child {
+    position: absolute;
+}
+
+.bst .children {
+    display: flex;
+}
