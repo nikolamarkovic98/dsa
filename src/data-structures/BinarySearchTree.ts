@@ -1,7 +1,7 @@
-interface IBinarySearchTreeNode {
+export interface IBinarySearchTreeNode {
     key: number;
-    left: IBinarySearchTreeNode | null;
-    right: IBinarySearchTreeNode | null;
+    left: BinarySearchTreeNode | null;
+    right: BinarySearchTreeNode | null;
     insert: (key: number) => void;
     search: (key: number) => boolean;
     printInorder: () => void;
@@ -11,8 +11,8 @@ interface IBinarySearchTreeNode {
 
 export class BinarySearchTreeNode implements IBinarySearchTreeNode {
     key: number;
-    left: IBinarySearchTreeNode | null;
-    right: IBinarySearchTreeNode | null;
+    left: BinarySearchTreeNode | null;
+    right: BinarySearchTreeNode | null;
 
     constructor(key: number) {
         this.key = key;
@@ -34,6 +34,22 @@ export class BinarySearchTreeNode implements IBinarySearchTreeNode {
                 this.right = new BinarySearchTreeNode(key);
             } else {
                 this.right.insert(key);
+            }
+        }
+    }
+
+    remove(key: number) {
+        if (this.left && this.key > key) {
+            if (this.left.key === key) {
+                this.left = null;
+            } else {
+                this.left.remove(key);
+            }
+        } else if (this.right && this.key < key) {
+            if (this.right.key === key) {
+                this.right = null;
+            } else {
+                this.right.remove(key);
             }
         }
     }
